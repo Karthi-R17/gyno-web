@@ -735,7 +735,7 @@ section {
   margin-bottom: 15px;
 }
 .about .icon-boxes h3 {
-  font-size: 28px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--vblue);
   margin-bottom: 15px;
@@ -1102,7 +1102,7 @@ section {
   margin-bottom: 15px;
 }
 .featured-services .icon i {
-  font-size: 48px;
+  font-size: 30px;
   line-height: 1;
   color: var(--vblue);
   transition: all 0.3s ease-in-out;
@@ -1110,13 +1110,13 @@ section {
 .featured-services .title {
   font-weight: 700;
   margin-bottom: 15px;
-  font-size: 18px;
+  font-size: 14px;
 }
 .featured-services .title a {
   color: #111;
 }
 .featured-services .description {
-  font-size: 15px;
+  font-size: 12px;
   line-height: 28px;
   margin-bottom: 0;
 }

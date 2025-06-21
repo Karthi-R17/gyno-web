@@ -17,11 +17,11 @@ export class AppComponent {
   constructor(private title: Title, private meta: Meta) {
     this.title.setTitle('Gyno | QwinGyno');
     this.meta.addTags([
-      { name: 'description', content: 'Expert gynecological and fertility services including IVF, prenatal care, hormone therapy, and more. Trusted care for every stage of a woman’s life.' },
-      { name: 'keywords', content: 'fertility specialist, gynecologist, women’s health, PCOS' },
+      { name: 'description', content: 'Queewin Gyno Pharmaceuticals, Expert gynecological and fertility services including IVF, prenatal care, hormone therapy, and more. Trusted care for every stage of a woman’s life.' },
+      { name: 'keywords', content: 'Queewin Gyno Pharmaceuticals, fertility specialist, gynecologist, women’s health, PCOS' },
       { name: 'robots', content: 'index, follow' },
       { property: 'og:title', content: 'Qwin Gyno - Home' },
-      { property: 'og:description', content: 'offering expert care in womens health, prenatal checkups, fertility treatments, and preventive screenings. Compassionate, confidential, and personalized services.' },
+      { property: 'og:description', content: 'Queewin Gyno Pharmaceuticals, offering expert care in womens health, prenatal checkups, fertility treatments, and preventive screenings. Compassionate, confidential, and personalized services.' },
     ]);
   }
 }
