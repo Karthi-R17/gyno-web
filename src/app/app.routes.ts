@@ -10,11 +10,11 @@ export const routes: Routes = [
         loadChildren: () =>
             import('./shared-module/gyno-products/route/gyno.routes')
                 .then(r => r.gynoRoutes)
-    },
-    {
-        path: 'gyno/:slug',
-        loadChildren: () =>
-            import('./shared-module/gyno-products/route/gyno.routes')
-                .then(m => m.gynoRoutes)
     }
+    // {
+    //     path: 'gyno/:slug',
+    //     loadChildren: () =>
+    //         import('./shared-module/gyno-products/route/gyno.routes')
+    //             .then(m => m.gynoRoutes)
+    // }
 ];

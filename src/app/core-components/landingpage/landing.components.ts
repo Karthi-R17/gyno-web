@@ -24,7 +24,7 @@ export class LandingPageComponents {
   ]
 
   onClickGyno() {
-    this.router.navigate([]).then(result => {  window.open('/gyno', '_blank'); });
+    this.router.navigate([]).then(result => {  window.open('/gyno/all', '_blank'); });
      //window.open('/gyno', '_blank');
   }
 }

@@ -4,11 +4,11 @@ import { ProductsViewComponent } from '../components/product-view/product-view.c
 
 export const gynoRoutes: Routes = [
    {
-    path: "",
+    path: ":slug",
     component: GynoProductsComponent
   },
-  {
-    path: ":slug", // dynamic slug param
-    component: ProductsViewComponent
-  }
+  // {
+  //   path: ":slug", // dynamic slug param
+  //   component: ProductsViewComponent
+  // }
 ];
