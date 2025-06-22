@@ -4,10 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:queewin-gyno": "node dist/queewin-gyno/server/server.mjs"
+    "build:ssr": "ng build --configuration production && ng run queewin-gyno:server:production",
+    "prerender": "npm run build:ssr && ng run queewin-gyno:prerender",
+    "serve:static": "npx serve dist/queewin-gyno/browser"
   },
   "private": true,
   "dependencies": {

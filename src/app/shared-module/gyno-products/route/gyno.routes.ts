@@ -10,21 +10,5 @@ export const gynoRoutes: Routes = [
   {
     path: ":slug", // dynamic slug param
     component: ProductsViewComponent
-  },
-  {
-    path: ":gynova-plus", // dynamic slug param
-    component: ProductsViewComponent
-  },
-  {
-    path: ":g-cyst", // dynamic slug param
-    component: ProductsViewComponent
-  },
-  {
-    path: "gyno:gynova-plus", // dynamic slug param
-    component: ProductsViewComponent
-  },
-  {
-    path: "gyno:g-cyst", // dynamic slug param
-    component: ProductsViewComponent
   }
 ];
