@@ -21,6 +21,8 @@ jobs:
           lfs: false
       - name: Install dependencies
         run: npm i
+      - name: Generate Prerender Routes
+        run: npm run generate:routes
       - name: Build SSR + Prerender
         run: npm run prerender
       - name: Build And Deploy
