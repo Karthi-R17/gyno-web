@@ -65,7 +65,9 @@
                   "maximumError": "4kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "sourceMap": false,
+              "optimization": true
             },
             "development": {
               "optimization": false,
@@ -94,14 +96,20 @@
             "serverTarget": "queewin-gyno:server:production"
           }
         },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/queewin-gyno/server",
+            "main": "src/main.server.ts",
+            "tsConfig": "tsconfig.server.json"
+          }
+        },
         "prerender": {
           "builder": "@angular-devkit/build-angular:prerender",
           "options": {
-            "browserTarget": "queewin-gyno:build:production",
-            "serverTarget": "queewin-gyno:server:production",
-            "routes": [
-              "/"
-            ]
+            "browserTarget": "queewin-gyno:build",
+            "serverTarget": "queewin-gyno:server",
+            "routesFile": "angular.prerender.routes.json"
           }
         },
         "extract-i18n": {
