@@ -1,14 +1,14 @@
 import { Routes } from '@angular/router';
-import { GynoProductsComponent } from '../components';
+import { QueewinProductsComponent } from '../components';
 
-export const gynoRoutes: Routes = [
+export const queewinRoutes: Routes = [
   {
     path: ":slug",
-    component: GynoProductsComponent
+    component: QueewinProductsComponent
   },
   {
     path: ":",
-    component: GynoProductsComponent
+    component: QueewinProductsComponent
   },
   // {
   //   path: ":slug", // dynamic slug param

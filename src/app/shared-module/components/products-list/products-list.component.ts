@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
-import { Product } from '../../../models/product';
-import { ProductsService } from '../../../service/products.service';
 import { CommonModule } from '@angular/common';
+import { Product } from '../../models/product';
+import { ProductsService } from '../../service/products.service';
 
 @Component({
     standalone: true,
-    selector: 'app-gyno-list',
-    templateUrl: './gyno-products-list.component.html',
-    styleUrl: './gyno-products-list.component.scss',
+    selector: 'app-product-list',
+    templateUrl: './products-list.component.html',
+    styleUrl: './products-list.component.scss',
     imports: [CommonModule],
 })
-export class Gyno_ProductsListComponent {
+export class ProductsListComponent {
     title = 'queewin-gyno';
     productsList: Array<Product> | any;
     constructor(
@@ -25,9 +25,9 @@ export class Gyno_ProductsListComponent {
         { name: 'G Cyst', slug: 'g-cyst' }
     ];
 
-    onClickProductView(url: string) {
-        console.log(url);
-        this.router.navigate(['/gyno', url]);
+    onClickProductView(division: string, slug: string) {
+        console.log(slug, " division ", division);
+        this.router.navigate(['/' + division, slug]);
     }
 
     onImgError(event: any) {

@@ -1,0 +1,55 @@
+<div class="swiper testimonials-slider" data-aos="fade-up" data-aos-delay="100">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" *ngFor="let o of ourTeams">
+      <div class="testimonial-wrap">
+        <div class="testimonial-item">
+          <div class="member d-flex align-items-start">
+            <div class="pic">
+              <img [src]="o.displayPicture || 'assets/img/ourteam/male_gender_empty.jpeg'" class="img-fluid"
+                alt="{{o.name}}">
+            </div>
+            <div class="member-info">
+              <h4>{{o.name | titlecase}}</h4>
+              <div class="meta">
+                <div class="meta-row">
+                  <span class="meta-item role" title="Role">{{ o.role | titlecase }}</span>
+                  <span class="meta-sep">•</span>
+                  <span class="meta-item division" title="Division">{{ o.division | titlecase }}</span>
+                </div>
+
+                <div class="meta-row small">
+                  <span class="meta-item experience">Experience: {{ o.experience }}</span>
+                </div>
+
+                <div class="contacts">
+                  <a *ngIf="o.contactnumber" class="contact-link" [href]="'tel:' + o.contactnumber">
+                    <i class="fas fa-phone" aria-hidden="true"></i>
+                    <span class="sr-only">Call</span>
+                    <span class="contact-text">{{ o.contactnumber }}</span>
+                  </a>
+
+                  <a *ngIf="o.emailId" class="contact-link" [href]="'mailto:' + o.emailId">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <span class="sr-only">Email</span>
+                    <span class="contact-text">{{ o.emailId }}</span>
+                  </a>
+                </div>
+              </div>
+
+
+              <div class="social">
+                <a href=""><i class="ri-twitter-fill"></i></a>
+                <a href=""><i class="ri-facebook-fill"></i></a>
+                <a href=""><i class="ri-instagram-fill"></i></a>
+                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <!-- <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div> -->
+</div>

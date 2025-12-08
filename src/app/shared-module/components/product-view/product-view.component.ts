@@ -3,16 +3,16 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, inject, Input, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
-import { ProductsService } from '../../../service/products.service';
+import { ProductsService } from '../../service/products.service';
 
 @Component({
     standalone: true,
-    selector: 'gyno-product-view',
+    selector: 'app-product-view',
     templateUrl: './product-view.component.html',
     styleUrl: './product-view.component.scss',
     imports: [HttpClientModule, CommonModule, NgIf]
 })
-export class GynoProductsViewComponent implements OnInit {
+export class ProductsViewComponent implements OnInit {
 
     route = inject(ActivatedRoute);
     title = inject(Title);

@@ -97,48 +97,15 @@
     <div class="container" data-aos="fade-up">
 
       <div class="row">
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" *ngFor="let fs of featuredServicesList">
           <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="fas fa-heartbeat"></i></div>
-            <h4 class="title"><a href="">Why Choose QueeWin Gyno Pharmaceuticals?</a></h4>
+            <div class="icon"><i [class]="fs?.icon"></i></div>
+            <h4 class="title"><a href="">{{fs?.title}}</a></h4>
             <p class="description">
-              Delivering Trust, Supporting Health - That's the QueeWin Gyno Promise.</p>
+              {{fs?.description}}</p>
           </div>
         </div>
-
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-          <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="fas fa-solid fa-chess"></i></div>
-            <h4 class="title"><a href="">Our Vision</a></h4>
-            <p class="description">
-              Our vision is to be a trusted leader in pharmaceutical distribution by providing quality medicines and
-              building strong partnerships across communities.</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-          <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="fas fa-solid fa-award"></i></div>
-            <h4 class="title"><a href="">Our Mission</a></h4>
-            <p class="description">
-              Our mission is to deliver safe, affordable medicines through a reliable supply chain, while supporting our
-              medical representatives and partners with timely service and ethical practices.</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-          <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon"><i class="fas fa-solid fa-bowling-ball"></i></div>
-            <h4 class="title"><a href="">Our Goal</a></h4>
-            <span class="description">
-              Our goal is to grow our presence through a strong distribution network, ensure product authenticity and
-              compliance, and improve healthcare access in every community we serve.
-            </span>
-          </div>
-        </div>
-
       </div>
-
     </div>
   </section><!-- End Featured Services Section -->
 
@@ -146,57 +113,22 @@
   <section id="about" class="about">
     <div class="container-fluid">
 
-      <div class="row">
-        <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative"
-          data-aos="fade-right" data-aos-delay="100">
-          <a href="javascript:void(0);" class="glightbox"></a>
+      <div class="row about-row">
+        <div class="col-xl-5 col-lg-6 image-box" data-aos="fade-right" data-aos-delay="100">
+          <img [src]="aboutOursList?.aboutImage" alt="About Image" class="about-image" />
         </div>
 
-        <div
-          class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5"
+        <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center px-lg-5"
           data-aos="fade-left" data-aos-delay="100">
-          <h3>What we are about</h3>
-          <p>
-            At <b>QueeWin Gyno Pharmaceuticals</b>, we are committed to improving access to safe, effective, and
-            affordable medicines.
-            Our company stands out because of our dedication to quality, integrity, and long-term relationships with our
-            partners in healthcare.
-          </p>
-          <p> We are working with the people who have 15 years of experiences in the medical field. It has been
-            established with the vision of marketing quality medicines.</p>
-          <p>We are committed towards a healthier and happier world. We strive to provide accessible and affordable
-            health care products.</p>
-          <div class="icon-box">
-            <div class="icon"><i class="bx bx-fingerprint"></i></div>
-            <h4 class="title"><a href="">Trusted Quality</a></h4>
-            <p class="description">We source and distribute only certified, high-quality pharmaceutical products,
-              ensuring safety and compliance at every stage.</p>
+          <h3>{{aboutOursList?.aboutTitle}}</h3>
+          <div [innerHTML]="aboutOursList?.aboutDescription"></div>
+          <div class="icon-box" *ngFor="let our of aboutOursList?.aboutList">
+            <div class="icon"><i [class]="our?.icon"></i></div>
+            <h4 class="title"><a href="">{{our?.title}}</a></h4>
+            <p class="description">{{our?.description}}</p>
           </div>
-
-          <div class="icon-box">
-            <div class="icon"><i class="bx bx-gift"></i></div>
-            <h4 class="title"><a href="">Efficient Supply Chain</a></h4>
-            <p class="description">With a streamlined logistics network and dedicated representatives, we ensure fast,
-              reliable delivery to pharmacies and healthcare providers.</p>
-          </div>
-
-          <div class="icon-box">
-            <div class="icon"><i class="bx bx-atom"></i></div>
-            <h4 class="title"><a href="">Experienced Team</a></h4>
-            <p class="description">Our team includes experienced professionals and medical representatives who
-              understand the needs of the industry and our customers.</p>
-          </div>
-
-          <div class="icon-box">
-            <div class="icon"><i class="bx bx-fingerprint"></i></div>
-            <h4 class="title"><a href="">Customer-Focused Service</a></h4>
-            <p class="description">We work closely with our partners, offering personalized support, product education,
-              and flexible solutions tailored to your business.</p>
-          </div>
-
         </div>
       </div>
-
     </div>
   </section><!-- End About Section -->
 
@@ -212,65 +144,21 @@
       </div>
 
       <div class="row">
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" (click)="onClickGyno()" data-aos="fade-right" data-aos-delay="100">
-          <!-- <a href="#" routerLink="gyno" target="_blank"> -->
-            <div class="icon-box">
-              <div class="icon"><i class="fas fa-heartbeat"></i></div>
-              <h4><a href="">Gyno Cologist</a></h4>
-              <p>Dedicated to advancing women's health with trusted, high-quality gynecological products.</p>
-            </div>
-          <!-- </a> -->
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="100">
-          <div class="icon-box">
-            <div class="icon"><i class="fas fa-pills"></i></div>
-            <h4><a href="">Sed ut perspiciatis</a></h4>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="fade-left"
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" *ngFor="let d of divisions" data-aos="fade-right"
           data-aos-delay="100">
-          <div class="icon-box">
-            <div class="icon"><i class="fas fa-hospital-user"></i></div>
-            <h4><a href="">Magni Dolores</a></h4>
-            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+          <div class="icon-box cursor-pointer" (click)="onClickDivision(d.division)">
+            <div class="icon"><i [class]="d.icon" (click)="onClickDivision(d.division)"></i></div>
+            <h4 (click)="onClickDivision(d.division)">{{d.name}}</h4>
+            <p (click)="onClickDivision(d.division)">{{d.description}}</p>
           </div>
         </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-right" data-aos-delay="100">
-          <div class="icon-box">
-            <div class="icon"><i class="fas fa-dna"></i></div>
-            <h4><a href="">Nemo Enim</a></h4>
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="icon-box">
-            <div class="icon"><i class="fas fa-wheelchair"></i></div>
-            <h4><a href="">Dele cardo</a></h4>
-            <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-left" data-aos-delay="100">
-          <div class="icon-box">
-            <div class="icon"><i class="fas fa-notes-medical"></i></div>
-            <h4><a href="">Divera don</a></h4>
-            <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
-          </div>
-        </div>
-
       </div>
-
     </div>
   </section><!-- End Services Section -->
 
 
   <!-- ======= Departments Section ======= -->
-  <section id="departments" class="departments">
+  <!-- <section id="departments" class="departments">
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
@@ -381,7 +269,8 @@
       </div>
 
     </div>
-  </section><!-- End Departments Section -->
+  </section> -->
+  <!-- End Departments Section -->
 
   <!-- ======= Our Teams Section ======= -->
   <section id="doctors" class="doctors">
@@ -393,39 +282,45 @@
           instroduce my team..</p>
       </div>
 
-      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+      <!-- <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
         <div class="swiper-wrapper">
-
-          <div class="swiper-slide">
+          <div class="swiper-slide" *ngFor="let o of ourTeams">
             <div class="testimonial-wrap">
               <div class="testimonial-item">
                 <div class="member d-flex align-items-start">
-                  <div class="pic"><img src="assets/img/doctors/doctors-1.jpg" class="img-fluid" alt=""></div>
-                  <div class="member-info">
-                    <h4>Walter White</h4>
-                    <span>Chief Medical Officer</span>
-                    <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-                    <div class="social">
-                      <a href=""><i class="ri-twitter-fill"></i></a>
-                      <a href=""><i class="ri-facebook-fill"></i></a>
-                      <a href=""><i class="ri-instagram-fill"></i></a>
-                      <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                    </div>
+                  <div class="pic">
+                    <img [src]="o.displayPicture || 'assets/img/ourteam/male_gender_empty.jpeg'" class="img-fluid"
+                      alt="{{o.name}}">
                   </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="swiper-slide">
-            <div class="testimonial-wrap">
-              <div class="testimonial-item">
-                <div class="member d-flex align-items-start">
-                  <div class="pic"><img src="assets/img/doctors/doctors-2.jpg" class="img-fluid" alt=""></div>
                   <div class="member-info">
-                    <h4>Sarah Jhonson</h4>
-                    <span>Anesthesiologist</span>
-                    <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                    <h4>{{o.name | titlecase}}</h4>
+                    <div class="meta">
+                      <div class="meta-row">
+                        <span class="meta-item role" title="Role">{{ o.role | titlecase }}</span>
+                        <span class="meta-sep">•</span>
+                        <span class="meta-item division" title="Division">{{ o.division | titlecase }}</span>
+                      </div>
+
+                      <div class="meta-row small">
+                        <span class="meta-item experience">Experience: {{ o.experience }}</span>
+                      </div>
+
+                      <div class="contacts">
+                        <a *ngIf="o.contactnumber" class="contact-link" [href]="'tel:' + o.contactnumber">
+                          <i class="fas fa-phone" aria-hidden="true"></i>
+                          <span class="sr-only">Call</span>
+                          <span class="contact-text">{{ o.contactnumber }}</span>
+                        </a>
+
+                        <a *ngIf="o.emailId" class="contact-link" [href]="'mailto:' + o.emailId">
+                          <i class="fas fa-envelope" aria-hidden="true"></i>
+                          <span class="sr-only">Email</span>
+                          <span class="contact-text">{{ o.emailId }}</span>
+                        </a>
+                      </div>
+                    </div>
+
+
                     <div class="social">
                       <a href=""><i class="ri-twitter-fill"></i></a>
                       <a href=""><i class="ri-facebook-fill"></i></a>
@@ -437,76 +332,14 @@
               </div>
             </div>
           </div>
-          <!-- End testimonial item -->
-
-          <div class="swiper-slide">
-            <div class="testimonial-wrap">
-              <div class="testimonial-item">
-                <div class="member d-flex align-items-start">
-                  <div class="pic"><img src="assets/img/doctors/doctors-3.jpg" class="img-fluid" alt=""></div>
-                  <div class="member-info">
-                    <h4>William Anderson</h4>
-                    <span>Cardiology</span>
-                    <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
-                    <div class="social">
-                      <a href=""><i class="ri-twitter-fill"></i></a>
-                      <a href=""><i class="ri-facebook-fill"></i></a>
-                      <a href=""><i class="ri-instagram-fill"></i></a>
-                      <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="swiper-slide">
-            <div class="testimonial-wrap">
-              <div class="testimonial-item">
-                <div class="member d-flex align-items-start">
-                  <div class="pic"><img src="assets/img/doctors/doctors-4.jpg" class="img-fluid" alt=""></div>
-                  <div class="member-info">
-                    <h4>Amanda Jepson</h4>
-                    <span>Neurosurgeon</span>
-                    <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
-                    <div class="social">
-                      <a href=""><i class="ri-twitter-fill"></i></a>
-                      <a href=""><i class="ri-facebook-fill"></i></a>
-                      <a href=""><i class="ri-instagram-fill"></i></a>
-                      <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="swiper-slide">
-            <div class="testimonial-wrap">
-              <div class="testimonial-item">
-                <div class="member d-flex align-items-start">
-                  <div class="pic"><img src="assets/img/doctors/doctors-2.jpg" class="img-fluid" alt=""></div>
-                  <div class="member-info">
-                    <h4>Sarah Jhonson</h4>
-                    <span>Anesthesiologist</span>
-                    <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
-                    <div class="social">
-                      <a href=""><i class="ri-twitter-fill"></i></a>
-                      <a href=""><i class="ri-facebook-fill"></i></a>
-                      <a href=""><i class="ri-instagram-fill"></i></a>
-                      <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End testimonial item -->
           <div class="swiper-pagination"></div>
         </div>
         <div class="swiper-pagination"></div>
-      </div>
+      </div> -->
+      <ourteam-carousel ngSkipHydration></ourteam-carousel>
     </div>
-  </section><!-- End Our Teams Section -->
+  </section>
+  <!-- End Our Teams Section -->
 
 
   <!-- ======= Gallery Section ======= -->
@@ -514,80 +347,23 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
-        <h2>Gallery</h2>
-        <p>Welcome to our gallery. Here you can view moments from our pharma, events, and day-to-day activities. These images reflect our environment, our people, and our commitment to women's health and well-being.</p>
+        <h2>{{galaryImages?.title}}</h2>
+        <p>{{galaryImages?.description}}</p>
       </div>
     </div>
 
     <div class="container-fluid">
       <div class="row g-0">
 
-        <div class="col-lg-3 col-md-4" data-aos="fade-right" data-aos-delay="100">
+        <div class="col-lg-3 col-md-4" data-aos="fade-right" data-aos-delay="100"
+          *ngFor="let g of galaryImages?.imageList">
           <div class="gallery-item">
-            <a href="assets/img/gallery/gallery-1.jpg" class="galelry-lightbox">
-              <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+            <a [href]="g?.imageURL" class="galelry-lightbox">
+              <img [src]="g?.imageURL" alt="g?.imageName" class="img-fluid">
             </a>
           </div>
         </div>
-
-        <div class="col-lg-3 col-md-4" data-aos="fade-right" data-aos-delay="100">
-          <div class="gallery-item">
-            <a href="assets/img/gallery/gallery-2.jpg" class="galelry-lightbox">
-              <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
-            </a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4" data-aos="fade-right" data-aos-delay="100">
-          <div class="gallery-item">
-            <a href="assets/img/gallery/gallery-3.jpg" class="galelry-lightbox">
-              <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
-            </a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4" data-aos="fade-right" data-aos-delay="100">
-          <div class="gallery-item">
-            <a href="assets/img/gallery/gallery-4.jpg" class="galelry-lightbox">
-              <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
-            </a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4" data-aos="fade-left" data-aos-delay="100">
-          <div class="gallery-item">
-            <a href="assets/img/gallery/gallery-5.jpg" class="galelry-lightbox">
-              <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
-            </a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4" data-aos="fade-left" data-aos-delay="100">
-          <div class="gallery-item">
-            <a href="assets/img/gallery/gallery-6.jpg" class="galelry-lightbox">
-              <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
-            </a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4" data-aos="fade-left" data-aos-delay="100">
-          <div class="gallery-item">
-            <a href="assets/img/gallery/gallery-7.jpg" class="galelry-lightbox">
-              <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
-            </a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4" data-aos="fade-left" data-aos-delay="100">
-          <div class="gallery-item">
-            <a href="assets/img/gallery/gallery-8.jpg" class="galelry-lightbox">
-              <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
-            </a>
-          </div>
-        </div>
-
       </div>
-
     </div>
   </section><!-- End Gallery Section -->
 
@@ -607,9 +383,10 @@
     </div>
 
     <div>
-      <iframe style="border:0; width: 100%; height: 350px;" 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46560.36546087165!2d78.08814192349672!3d11.682820050322015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf06114a74d21%3A0xa68214af10c2d723!2sGyno%20Pharmaceutical!5e1!3m2!1sen!2sin!4v1750508687518!5m2!1sen!2sin"
-       width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe style="border:0; width: 100%; height: 350px;"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46560.36546087165!2d78.08814192349672!3d11.682820050322015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf06114a74d21%3A0xa68214af10c2d723!2sGyno%20Pharmaceutical!5e1!3m2!1sen!2sin!4v1750508687518!5m2!1sen!2sin"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
     <div class="container" data-aos="fade-right" data-aos-delay="100">

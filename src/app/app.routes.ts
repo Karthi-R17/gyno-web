@@ -10,6 +10,12 @@ export const routes: Routes = [
         loadChildren: () =>
             import('./shared-module/gyno-products/route/gyno.routes')
                 .then(r => r.gynoRoutes)
+    },
+    {
+        path: "queewin",
+        loadChildren: () =>
+            import('./shared-module/queewin-products/route/gyno.routes')
+                .then(r=> r.queewinRoutes)
     }
     // {
     //     path: 'gyno/:slug',

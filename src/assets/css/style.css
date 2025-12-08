@@ -784,9 +784,9 @@ section {
   font-size: 14px;
 }
 .about .video-box {
-  background: url("../img/about.jpg") center center no-repeat;
+  /* background: url("../img/about.jpg") center center no-repeat; */
   background-size: cover;
-  min-height: 500px;
+  /* min-height: 500px; */
 }
 .about .play-btn {
   width: 94px;
@@ -926,7 +926,7 @@ section {
 .services .icon-box {
   text-align: center;
   border: 1px solid #d5e1ed;
-  padding: 80px 20px;
+  padding: 40px 20px;
   transition: all ease-in-out 0.3s;
 }
 .services .icon-box .icon {
@@ -1116,8 +1116,8 @@ section {
   color: #111;
 }
 .featured-services .description {
-  font-size: 12px;
-  line-height: 28px;
+  font-size: 11px;
+  line-height: 20px;
   margin-bottom: 0;
 }
 .featured-services .icon-box:hover .title a, .featured-services .icon-box:hover .description {
@@ -1126,7 +1126,15 @@ section {
 .featured-services .icon-box:hover .icon i {
   color: #fff;
 }
-
+.icon-box {
+  cursor: pointer !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -ms-user-select: none !important;
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 10;
+}
 /*--------------------------------------------------------------
 # Departments
 --------------------------------------------------------------*/
@@ -1665,7 +1673,7 @@ section {
 }
 #footer .credits {
   padding-top: 5px;
-  font-size: 13px;
+  font-size: 10px;
   color: #444444;
 }
 #footer .social-links a {

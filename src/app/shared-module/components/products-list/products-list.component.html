@@ -5,11 +5,11 @@
       <div class="product-card" *ngFor="let p of productsList">
         <!-- Product Image -->
         <img [src]="p.image || 'assets/img/products/empty_tabletes_img.jpeg'" alt="{{ p.name }}"
-          (error)="onImgError($event)" (click)="onClickProductView(p.slug)" class="cursor-pointer"/>
+          (error)="onImgError($event)" (click)="onClickProductView(p.division, p.slug)" class="cursor-pointer"/>
         <!-- Title -->
-        <h3 (click)="onClickProductView(p.slug)" class="cursor-pointer">{{ p.name }}</h3>
+        <h3 (click)="onClickProductView(p.division, p.slug)" class="cursor-pointer">{{ p.name }}</h3>
         <!-- Subtitle -->
-        <p class="subtitle" (click)="onClickProductView(p.slug)" class="cursor-pointer">{{ p.subtitle }}</p>
+        <p class="subtitle" (click)="onClickProductView(p.division, p.slug)" class="cursor-pointer">{{ p.subtitle }}</p>
         <!-- Pricing -->
         <div class="price-box">
           <span class="price">₹{{ p.price }}</span>

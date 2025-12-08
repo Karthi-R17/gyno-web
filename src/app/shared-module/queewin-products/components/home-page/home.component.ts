@@ -1,5 +1,4 @@
 import { RouterOutlet } from '@angular/router';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, inject, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
@@ -9,16 +8,15 @@ import { ProductsViewComponent } from '../../../components/product-view/product-
 
 @Component({
     standalone: true,
-    selector: 'app-gyno',
-    templateUrl: './gyno-home.component.html',
-    styleUrl: './gyno-home.component.scss',
+    selector: 'app-queewin',
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss',
     imports: [CommonModule, NgIf, ProductsViewComponent, ProductsListComponent],
 })
-export class GynoProductsComponent implements OnInit {
+export class QueewinProductsComponent implements OnInit {
     route = inject(ActivatedRoute);
     title = inject(Title);
     meta = inject(Meta);
-    http = inject(HttpClient);
 
     slug!: string;
     product: any;

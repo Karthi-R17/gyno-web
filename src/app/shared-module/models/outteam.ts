@@ -1,0 +1,15 @@
+export interface OurTeam{
+    name: string,
+    role: string,
+    division: string,
+    gender?: string,
+    experience?: number,
+    contactnumber?: string,
+    emailId?: string,
+    displayPicture?: string,
+    about?: string,
+    twitter?: string,
+    facebook?: string,
+    instagram?: string,
+    linkedin?:string,
+}

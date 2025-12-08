@@ -1,0 +1,46 @@
+import { OurTeam } from "../models/outteam";
+
+export const ourTeams: Array<OurTeam> = [
+    {
+        name: "Mohan",
+        role: "Manager",
+        division: "queewin",
+        experience: 10,
+        contactnumber: "7601080584",
+        emailId: "",
+        displayPicture: "assets/img/ourteam/male_gender_empty.jpeg",
+        about: "",
+        twitter: "",
+        facebook: "",
+        instagram: "",
+        linkedin: "",
+    },
+    {
+        name: "Karthikeyan",
+        role: "Area Manager",
+        division: "gyno",
+        experience: 10,
+        contactnumber: "7601080584",
+        emailId: "",
+        displayPicture: "assets/img/ourteam/male_gender_empty.jpeg",
+        about: "",
+        twitter: "",
+        facebook: "",
+        instagram: "",
+        linkedin: "",
+    },
+     {
+        name: "Elavarasan",
+        role: "Founder",
+        division: "gyno",
+        experience: 20,
+        contactnumber: "7601080584",
+        emailId: "",
+        displayPicture: "assets/img/ourteam/male_gender_empty.jpeg",
+        about: "",
+        twitter: "",
+        facebook: "",
+        instagram: "",
+        linkedin: "",
+    }
+]
