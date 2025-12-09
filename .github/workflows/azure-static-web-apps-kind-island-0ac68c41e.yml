@@ -20,7 +20,7 @@ jobs:
           submodules: true
           lfs: false
       - name: Install dependencies
-        run: npm i
+        run: npm i --force
       - name: Generate Prerender Routes
         run: npm run generate:routes
       - name: Build And Deploy
@@ -48,3 +48,4 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_KIND_ISLAND_0AC68C41E }}
           action: "close"
+
