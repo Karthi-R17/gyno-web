@@ -50,13 +50,13 @@
 
       <!-- Slide 1 -->
       <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg)">
-        <div class="container">
+        <!-- <div class="container">
           <h2>Welcome to <span>QueeWin Gyno Pharmaceuticals</span></h2>
           <p>It is our mission to help you, <br> to get the best out of your products and by <br> doing so to improve
             the
             patient’s life.</p>
           <a href="#about" class="btn-get-started scrollto">Read More</a>
-        </div>
+        </div> -->
       </div>
 
       <!-- Slide 2 -->
@@ -97,7 +97,7 @@
     <div class="container" data-aos="fade-up">
 
       <div class="row">
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" *ngFor="let fs of featuredServicesList">
+        <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" *ngFor="let fs of featuredServicesList">
           <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
             <div class="icon"><i [class]="fs?.icon"></i></div>
             <h4 class="title"><a href="">{{fs?.title}}</a></h4>
@@ -137,21 +137,22 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-title" data-aos="fade-up">
-        <h2>Divisions</h2>
+        <h2>Products</h2>
         <p><b>QUEEWIN GYNO PHARMACEUTICALS</b> is one of the largest and longstanding distributors of wide range of
           pharmaceutical Products in
           Tamilnadu dealing with many manufacturers.</p>
       </div>
 
       <div class="row">
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" *ngFor="let d of divisions" data-aos="fade-right"
+        <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch" *ngFor="let d of divisions" data-aos="fade-right"
           data-aos-delay="100">
           <div class="icon-box cursor-pointer" (click)="onClickDivision(d.division)">
             <div class="icon"><i [class]="d.icon" (click)="onClickDivision(d.division)"></i></div>
             <h4 (click)="onClickDivision(d.division)">{{d.name}}</h4>
             <p (click)="onClickDivision(d.division)">{{d.description}}</p>
           </div>
-        </div>
+        </div> -->
+        <land-product-list></land-product-list>
       </div>
     </div>
   </section><!-- End Services Section -->
@@ -273,14 +274,14 @@
   <!-- End Departments Section -->
 
   <!-- ======= Our Teams Section ======= -->
-  <section id="doctors" class="doctors">
-    <div class="container" data-aos="fade-up">
+  <!-- <section id="doctors" class="doctors">
+    <div class="container" data-aos="fade-up"> -->
 
-      <div class="section-title">
+      <!-- <div class="section-title">
         <h2>Our Teams</h2>
         <p>In any industry where the people behind a company are as important as the company itself. Proud to
           instroduce my team..</p>
-      </div>
+      </div> -->
 
       <!-- <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
         <div class="swiper-wrapper">
@@ -336,9 +337,9 @@
         </div>
         <div class="swiper-pagination"></div>
       </div> -->
-      <ourteam-carousel ngSkipHydration></ourteam-carousel>
-    </div>
-  </section>
+      <!-- <ourteam-carousel ngSkipHydration></ourteam-carousel> -->
+    <!-- </div>
+  </section> -->
   <!-- End Our Teams Section -->
 
 

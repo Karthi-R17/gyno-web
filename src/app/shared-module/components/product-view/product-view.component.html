@@ -10,11 +10,11 @@
     <div class="product-info-box">
 
         <h2 class="product-title">{{ product?.name }}</h2>
-        <p class="product-subtitle">{{ product?.subtitle }}</p>
+        <p class="product-subtitle">{{ product?.indication }}</p>
 
         <!-- Price Section -->
         <div class="price-section">
-            <span class="mrp">MRP: <s>₹{{ product?.mrp }}</s></span>
+            <!-- <span class="mrp">MRP: <s>₹{{ product?.mrp }}</s></span>
 
             <span *ngIf="product?.price" class="price">
                 Price: ₹{{ product?.price }}
@@ -22,42 +22,35 @@
 
             <span *ngIf="product?.price" class="discount">
                 ({{ product?.mrp - product?.price }} OFF)
-            </span>
+            </span> -->
         </div>
-
+       
         <!-- Static Product Details Table -->
         <div class="spec-table">
             <div class="spec-row">
-                <span class="label">Net Qty:</span>
-                <span>{{ product?.details?.netQty }}</span>
+                <span class="label">Pack:</span>
+                <span>{{ product?.details?.pack }}</span>
             </div>
-
             <div class="spec-row">
-                <span class="label">HSN Code:</span>
-                <span>{{ product?.details?.hsn }}</span>
+                <span class="label">Indication:</span>
+                <span>{{ product?.details?.indication }}</span>
             </div>
-
             <div class="spec-row">
-                <span class="label">Shelf Life:</span>
-                <span>{{ product?.details?.shelfLife }} days</span>
-            </div>
-
-            <div class="spec-row">
-                <span class="label">Item Weight:</span>
-                <span>{{ product?.details?.weight }}</span>
+                <span class="label">Dose:</span>
+                <span>{{ product?.details?.dose }}</span>
             </div>
         </div>
 
         <!-- Read More Section -->
-        <span class="read-more-lik" (click)="showMore = !showMore">
+        <!-- <span class="read-more-lik" (click)="showMore = !showMore">
             {{ showMore ? 'Hide Details' : 'Read More' }}
-        </span>
+        </span> -->
     </div>
 </div>
-<div class="read-more-section" *ngIf="showMore">
+<!-- <div class="read-more-section" *ngIf="showMore">
     <h3>Product Description</h3>
     <p>{{ product?.description }}</p>
 
     <h3>Disclaimer</h3>
     <p>{{ product?.details?.disclaimer }}</p>
-</div>
+</div> -->

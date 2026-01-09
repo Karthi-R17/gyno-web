@@ -1,0 +1,34 @@
+<div class="page-container">
+  <div class="text-center container">
+    <h4 class="mb-5"><strong></strong></h4>
+    <div class="product-grid">
+      <div class="product-card" *ngFor="let p of productsList">
+        <!-- Product Image -->
+        <img [src]="p.image || 'assets/img/products/empty_tabletes_img.jpeg'" alt="{{ p.name }}"
+          (error)="onImgError($event)" (click)="onClickProductView(p.division, p.slug)" class="cursor-pointer"/>
+        <!-- Title -->
+        <h3 (click)="onClickProductView(p.division, p.slug)" class="cursor-pointer">{{ p.name }}</h3>
+        <!-- Subtitle -->
+        <p (click)="onClickProductView(p.division, p.slug)" class="cursor-pointer subtitle">{{ p.indication }}</p>
+        <!-- Pricing -->
+        <div class="price-box">
+          <!-- <span class="price">₹{{ p.price }}</span>
+          <span class="mrp" *ngIf="p.mrp">₹{{ p.mrp }}</span>
+          <span class="discount" *ngIf="p.mrp && p.price">
+            {{ calculateDiscount(p.mrp, p.price) }}% OFF
+          </span> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- View All -->
+  <div class="view-all-wrapper">
+    <a
+      (click)="onClickDivision('gyno')"
+      class="view-all-link"
+    >
+      View All Products →
+    </a>
+  </div>
+  </div>
+</div>

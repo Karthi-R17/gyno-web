@@ -1,114 +1,391 @@
 import { Division } from "../models/division";
 import { Product } from "../models/product";
-export const productsList: Array<Product> = [
+export const productsList: Product[] = [
     {
-        name: 'Gynova Plus', slug: 'gynova-plus', division: 'gyno', title: "Gynova Plus", subtitle: "Gynova Plus", image: "assets/img/products/empty_syrub_img.jpeg", price: 434.34, mrp: 5454, discounts: 15, badge: "", description: "",
+        name: 'Gynova Plus',
+        slug: 'gynova-plus',
+        division: 'gyno',
+        indication: 'PCOS Management',
+        image: "assets/img/products/gynova plus.jpg",
+        badge: "",
+        description: "",
         details: {
-            netQty: "1 N",
-            hsn: "0231016514H1",
-            shelfLife: 1080,
-            weight: "70g",
+            pack: '1 * 10',
+            indication: 'Polycystic ovary syndrome, Assisted Reproductive Technology',
+            dose: 'ONCE DAILY (3 - 6month)',
             disclaimer: "This product is not intended to diagnose, treat, cure, or prevent any disease."
         }
     },
     {
-        name: 'G Cyst', slug: 'g-cyst', division: 'gyno', title: "G Cyst", subtitle: "G Cyst", image: 'assets/img/products/empty_strib_img.jpeg', price: 434.34, mrp: 5454, discounts: 15, badge: "", description: "",
+        name: 'BlastoQ300',
+        slug: 'blastoq300',
+        division: 'gyno',
+        indication: 'Ensure Embryonic Development',
+        image: "assets/img/products/BALSTOQ300.jpg",
+        badge: "",
+        description: "",
         details: {
-            netQty: "1 N",
-            hsn: "0231016514H1",
-            shelfLife: 1080,
-            weight: "70g",
+            pack: '1 * 10',
+            indication: 'Quality OVA Hope for Motherwood',
+            dose: 'ONCE DAILY (3 months)',
             disclaimer: "This product is not intended to diagnose, treat, cure, or prevent any disease."
         }
     },
     {
-        name: 'Q Win Product', slug: 'q-neolin', division: 'queewin', title: "Q Win Product", subtitle: "Q Win Product", image: 'assets/img/products/empty_strib_img.jpeg', price: 434.34, mrp: 5454, discounts: 15, badge: "", description: "",
+        name: 'BlastoQforte',
+        slug: 'blastoqforte',
+        division: 'gyno',
+        indication: 'Male Infertility',
+        image: "assets/img/products/BLASTOQFORTE.jpg",
+        badge: "",
+        description: "",
         details: {
-            netQty: "1 N",
-            hsn: "0231016514H1",
-            shelfLife: 1080,
-            weight: "70g",
+            pack: '1 * 10',
+            indication: 'Compleate Male Reproductive Health',
+            dose: 'ONCE DAILY (3 to 6 months)',
             disclaimer: "This product is not intended to diagnose, treat, cure, or prevent any disease."
         }
     },
     {
-        name: 'Gynova Plus', slug: 'gynova-plus', division: 'gyno', title: "Gynova Plus", subtitle: "Gynova Plus", image: 'assets/img/products/empty_tabletes_img.jpeg', price: 434.34, mrp: 5454, discounts: 15, badge: "", description: "",
+        name: 'Q Andro 75',
+        slug: 'q-andro-75',
+        division: 'gyno',
+        indication: 'Fosters Oocyte Quality And Quantity',
+        image: "assets/img/products/Q ANDRO 75 TAB.png",
+        badge: "",
+        description: "",
         details: {
-            netQty: "1 N",
-            hsn: "0231016514H1",
-            shelfLife: 1080,
-            weight: "70g",
+            pack: '1 * 10',
+            indication: 'Restores reserve Better Quality Oocytes',
+            dose: 'ONCE DAILY',
             disclaimer: "This product is not intended to diagnose, treat, cure, or prevent any disease."
         }
     },
     {
-        name: 'G Cyst', slug: 'g-cyst', division: 'gyno', title: "G Cyst", subtitle: "G Cyst", image: 'assets/img/products/empty_tabletes_img', price: 434.34, mrp: 5454, discounts: 15, badge: "", description: "",
+        name: 'Q fert M',
+        slug: 'q-fert-m',
+        division: 'gyno',
+        indication: 'Male Infertility',
+        image: "assets/img/products/Qfert M Carton.jpg",
+        badge: "",
+        description: "",
         details: {
-            netQty: "1 N",
-            hsn: "0231016514H1",
-            shelfLife: 1080,
-            weight: "70g",
+            pack: '10 * 10',
+            indication: 'Improves Fertilization & Pregnancy Rates',
+            dose: 'OD/BD (3 TO 6 Months)',
             disclaimer: "This product is not intended to diagnose, treat, cure, or prevent any disease."
         }
     },
     {
-        name: 'Gynova Plus', slug: 'gynova-plus', division: 'gyno', title: "Gynova Plus", subtitle: "Gynova Plus", image: 'assets/img/products/empty_multi_tubt_tab_image.jpeg', price: 434.34, mrp: 5454, discounts: 15, badge: "", description: "",
+        name: 'Q Cyst',
+        slug: 'q-cyst',
+        division: 'gyno',
+        indication: 'PCOS Management ',
+        image: "assets/img/products/Q-Cyst.jpg",
+        badge: "",
+        description: "",
         details: {
-            netQty: "1 N",
-            hsn: "0231016514H1",
-            shelfLife: 1080,
-            weight: "70g",
+            pack: '10 * 10',
+            indication: 'Restoring Hormonal Harmony & Fertility',
+            dose: 'OD/BD (3 TO 6 Months)',
             disclaimer: "This product is not intended to diagnose, treat, cure, or prevent any disease."
         }
     },
     {
-        name: 'Queedm Oil', slug: 'queedm-oil', division: 'queewin', title: "Queedm Oil", subtitle: "Queedm Oil", image: 'assets/img/products/empty_syrub_img.jpeg', price: 434.34, mrp: 5454, discounts: 15, badge: "", description: "",
+        name: 'Jeosital M',
+        slug: 'jeosital-m',
+        division: 'gyno',
+        indication: 'PCOS Management',
+        image: "assets/img/products/jeosital m.png",
+        badge: "",
+        description: "",
         details: {
-            netQty: "1 N",
-            hsn: "0231016514H1",
-            shelfLife: 1080,
-            weight: "70g",
+            pack: '1 * 10',
+            indication: 'Rebalancing PCOS at its Root',
+            dose: 'OD/BD (3 TO 6 Months)',
             disclaimer: "This product is not intended to diagnose, treat, cure, or prevent any disease."
         }
     },
     {
-        name: 'Calcigyn D3', slug: 'calcigyn-d3', division: 'ortho', title: "Calcigyn D3", subtitle: "Calcigyn D3", image: 'assets/img/products/empty_syrub_img.jpeg', price: 434.34, mrp: 5454, discounts: 15, badge: "", description: "",
+        name: 'Jeosital DS',
+        slug: 'jeosital-ds',
+        division: 'gyno',
+        indication: 'Obese PCOS Management',
+        image: "assets/img/products/jeosital DS.png",
+        badge: "",
+        description: "",
         details: {
-            netQty: "1 N",
-            hsn: "0231016514H1",
-            shelfLife: 1080,
-            weight: "70g",
+            pack: '1 * 10',
+            indication: 'in overweight and obese pcos associated with infertility',
+            dose: 'Once Daily (3 TO 6 Months)',
             disclaimer: "This product is not intended to diagnose, treat, cure, or prevent any disease."
         }
     },
     {
-        name: 'Queewin 50', slug: 'queewin-50', division: 'queewin', title: "Queewin 50", subtitle: "Queewin 50", image: 'assets/img/products/empty_syrub_img.jpeg', price: 434.34, mrp: 5454, discounts: 15, badge: "", description: "",
+        name: 'Jeo Dha Plus',
+        slug: 'jeo-dha-plus',
+        division: 'gyno',
+        indication: 'Brain Development',
+        image: "assets/img/products/JEO DHA PLUS.png",
+        badge: "",
+        description: "",
         details: {
-            netQty: "1 N",
-            hsn: "0231016514H1",
-            shelfLife: 1080,
-            weight: "70g",
+            pack: '10 * 10',
+            indication: 'To Support Fetal Brain Development',
+            dose: 'Once Daily',
             disclaimer: "This product is not intended to diagnose, treat, cure, or prevent any disease."
         }
-    }
+    },
+    {
+        name: 'Ique Fert 300',
+        slug: 'ique-fert-300',
+        division: 'gyno',
+        indication: 'Male Infertility',
+        image: "assets/img/products/IQEFERT 300.jpg",
+        badge: "",
+        description: "",
+        details: {
+            pack: '1 * 10',
+            indication: 'The Mitochondrial Fertility Booster',
+            dose: 'Once Daily (3 TO 6 Months)',
+            disclaimer: "This product is not intended to diagnose, treat, cure, or prevent any disease."
+        }
+    },
+    {
+        name: 'Ique Gest 200',
+        slug: 'ique-gest-200',
+        division: 'gyno',
+        indication: 'Lutal Phase Defect',
+        image: "assets/img/products/ique gest.png",
+        badge: "",
+        description: "",
+        details: {
+            pack: '1 * 10',
+            indication: 'Natural Support For a Healthy Pregnancy',
+            dose: 'OD/BD',
+            disclaimer: "This product is not intended to diagnose, treat, cure, or prevent any disease."
+        }
+    },
+    {
+        name: 'DYDROGOAL 10mg',
+        slug: 'dydrogoal-10mg',
+        division: 'gyno',
+        indication: 'Lutal Phase Defect',
+        image: "assets/img/products/dydrogoal.png",
+        badge: "",
+        description: "",
+        details: {
+            pack: '1 * 10',
+            indication: 'Reduces Risk Of Miscarriage in Early Gestation',
+            dose: 'OD/BD',
+            disclaimer: "This product is not intended to diagnose, treat, cure, or prevent any disease."
+        }
+    },
+    {
+        name: 'V FIT',
+        slug: 'v-fit',
+        division: 'gyno',
+        indication: 'Obese - PCOD',
+        image: "assets/img/products/v fit.png",
+        badge: "",
+        description: "",
+        details: {
+            pack: '10 * 10',
+            indication: 'weight Control & Fertility Balance',
+            dose: '1 to 3 Capsules per day',
+            disclaimer: "This product is not intended to diagnose, treat, cure, or prevent any disease."
+        }
+    },
+    {
+        name: 'Gynargin 1g',
+        slug: 'gynargin 1g',
+        division: 'gyno',
+        indication: 'IUGR',
+        image: "assets/img/products/GYNARGIN 1G.jpg",
+        badge: "",
+        description: "",
+        details: {
+            pack: '10 * 10',
+            indication: 'Erectile dysfunction',
+            dose: 'OD/BD',
+            disclaimer: "This product is not intended to diagnose, treat, cure, or prevent any disease."
+        }
+    },
+    {
+        name: 'Gynargin Sachet',
+        slug: 'gynargin-sachet',
+        division: 'gyno',
+        indication: 'IUGR',
+        image: "assets/img/products/sachet.jpg",
+        badge: "",
+        description: "",
+        details: {
+            pack: '1 * 20',
+            indication: 'Prevents pregnancy complications',
+            dose: 'OD/BD',
+            disclaimer: "This product is not intended to diagnose, treat, cure, or prevent any disease."
+        }
+    },
+    {
+        name: 'GYNOLET 2.5mg',
+        slug: 'gynolet-2.5mg',
+        division: 'gyno',
+        indication: 'Super Ovulation',
+        image: "assets/img/products/GynoLet.jpg",
+        badge: "",
+        description: "",
+        details: {
+            pack: '10 * 10',
+            indication: 'Science Backed Fertility Support in IVF',
+            dose: 'once daily 3 to 7th day',
+            disclaimer: "This product is not intended to diagnose, treat, cure, or prevent any disease."
+        }
+    },
+    {
+        name: 'GYNOLET 5mg',
+        slug: 'gynolet-5mg',
+        division: 'gyno',
+        indication: 'Super Ovulation',
+        image: "assets/img/products/gynolet 5mg.jpg",
+        badge: "",
+        description: "",
+        details: {
+            pack: '1 * 5',
+            indication: 'Science Backed Fertility Support in IVF',
+            dose: 'once daily 3 to 7th day',
+            disclaimer: "This product is not intended to diagnose, treat, cure, or prevent any disease."
+        }
+    },
+    {
+        name: 'CALCIGYN D3',
+        slug: 'calcigyn-d3',
+        division: 'gyno',
+        indication: 'Bone Strength',
+        image: "assets/img/products/CalciGyn D3.jpg",
+        badge: "",
+        description: "",
+        details: {
+            pack: '10 * 10',
+            indication: 'Life Long Bone Strength',
+            dose: 'OD/BD',
+            disclaimer: "This product is not intended to diagnose, treat, cure, or prevent any disease."
+        }
+    },
+    {
+        name: 'FERROGYN XT',
+        slug: 'ferrogyn-xt',
+        division: 'gyno',
+        indication: 'BLOOD HEALTH',
+        image: "assets/img/products/Ferrogyn-XT.jpg",
+        badge: "",
+        description: "",
+        details: {
+            pack: '10 * 10',
+            indication: 'IRON DEFICIANCY',
+            dose: 'Once Daily',
+            disclaimer: "This product is not intended to diagnose, treat, cure, or prevent any disease."
+        }
+    },
+    {
+        name: 'PANTOGYN 40',
+        slug: 'pantogyn-40',
+        division: 'gyno',
+        indication: 'GERD & ZES',
+        image: "assets/img/products/Pantogyn-40.jpg",
+        badge: "",
+        description: "",
+        details: {
+            pack: '10 * 10',
+            indication: 'HIGH RESPONSE FOR GERD',
+            dose: 'OD/BD',
+            disclaimer: "This product is not intended to diagnose, treat, cure, or prevent any disease."
+        }
+    },
+    {
+        name: 'PANTOGYN DSR',
+        slug: 'pantogyn-dsr',
+        division: 'gyno',
+        indication: 'GERD & ZES',
+        image: "assets/img/products/PANTOGYN DSR.jpg",
+        badge: "",
+        description: "",
+        details: {
+            pack: '10 * 10',
+            indication: 'HIGH RESPONSE FOR GERD',
+            dose: 'OD/BD',
+            disclaimer: "This product is not intended to diagnose, treat, cure, or prevent any disease."
+        }
+    },
+    {
+        name: 'M FIN 25',
+        slug: 'm-fin-25',
+        division: 'gyno',
+        indication: 'First line theropy for Male',
+        image: "assets/img/products/M FIN 25.png",
+        badge: "",
+        description: "",
+        details: {
+            pack: '10 * 10',
+            indication: 'ENHANCING SPERM HEALTH FOR CONCEPTION',
+            dose: '25th DAY TO UPTO 6 MONTHS',
+            disclaimer: "This product is not intended to diagnose, treat, cure, or prevent any disease."
+        }
+    },
+    {
+        name: 'M FIN 50',
+        slug: 'm-fin-50',
+        division: 'gyno',
+        indication: 'OVULATION',
+        image: "assets/img/products/M FIN 50.png",
+        badge: "",
+        description: "",
+        details: {
+            pack: '10 * 10',
+            indication: 'REDUCES THE RISK OF INFERTILITY',
+            dose: '25th DAY TO UPTO 6 MONTHS',
+            disclaimer: "This product is not intended to diagnose, treat, cure, or prevent any disease."
+        }
+    },
+    {
+        name: 'M FIN 100',
+        slug: 'm-fin-100',
+        division: 'gyno',
+        indication: 'OVULATION',
+        image: "assets/img/products/M FIN 100.png",
+        badge: "",
+        description: "",
+        details: {
+            pack: '10 * 10',
+            indication: 'REDUCES THE RISK OF INFERTILITY',
+            dose: '25th DAY TO UPTO 6 MONTHS',
+            disclaimer: "This product is not intended to diagnose, treat, cure, or prevent any disease."
+        }
+    },
+    {
+        name: 'QUEEWIN ACT',
+        slug: 'queewin act',
+        division: 'gyno',
+        indication: 'The Active Trio for Antenatal Wellness',
+        image: "assets/img/products/QUEEWIN ACT.jpg",
+        badge: "",
+        description: "",
+        details: {
+            pack: '10 * 10',
+            indication: 'Reduces risk of Neural Tube Defect',
+            dose: '1 to 3 tablets per day',
+            disclaimer: "This product is not intended to diagnose, treat, cure, or prevent any disease."
+        }
+    },
 ]
 
 export const divisionList: Array<Division> = [
     {
         id: 1,
-        name: "Gyno Cologist",
+        name: "Gynecologist",
         division: "gyno",
         icon: 'fas fa-heartbeat',
         description: "Dedicated to advancing women's health with trusted, high-quality gynecological products.",
         detaildescription: "At QueeWin Gyno Pharmaceuticals, our Gynecologist Division is dedicated to women's health and well-being. We offer a specialized range of high-quality gynecological products that support reproductive health, hormonal balance, and maternal care. Trusted by healthcare professionals, our products are designed to meet the evolving needs of modern gynecology with safety, efficacy, and care."
-    },
-    {
-        id: 2,
-        name: "Queewin",
-        division: "queewin",
-        icon: 'fas fa-pills',
-        description: "A scientifically formulated supplement designed to support overall health and maintain daily wellnessA professionally formulated medical-grade product designed to support overall health and well-being, offering safe and effective care for daily wellness needs.",
-        detaildescription: "This product is scientifically developed to provide comprehensive support for essential health functions. Made with high-quality ingredients, it helps promote balance, enhance overall wellness, and assist the bodys natural processes."
     },
     {
         id: 3,

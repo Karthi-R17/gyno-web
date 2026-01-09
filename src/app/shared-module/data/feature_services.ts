@@ -3,22 +3,17 @@ import { FeaturedService } from "../models/featureservices";
 export const featureServices: Array<FeaturedService> = [
     {
         title: "Why Choose QueeWin Gyno Pharmaceuticals?",
-        description: "Delivering Trust, Supporting Health - That's the QueeWin Gyno Promise.",
+        description: "Globally Certified Manufacturing WHO-cGMP Certified Brands All brands manufactured under WHO-cGMP guidelines International quality and safety standards Reliable, compliant, and audit-ready production Key line: “Manufactured to global standards, trusted worldwide.",
         icon: "fas fa-heartbeat"
     },
     {
         title: "Our Vision",
-        description: "Our vision is to be a trusted leader in pharmaceutical distribution by providing quality medicines and building strong partnerships across communities.",
+        description: "To be the most trusted Indian pharma company in gynecology, recognized for patented products and scientific excellence, with a strong pan-India presence by 2030.",
         icon: "fas fa-solid fa-chess"
     },
     {
         title: "Our Mission",
-        description: "Our mission is to deliver safe, affordable medicines through a reliable supply chain, while supporting our medical representatives and partners with timely service and ethical practices.",
+        description: "Our mission is to develop and deliver high-quality, gynecology-focused pharmaceutical products by leveraging our 25 years of industry expertise, qualified pharma professionals, and a scientifically driven Product Management Team, while strictly adhering to ISO, cGMP, and Revised Schedule M standards.",
         icon: "fas fa-solid fa-award"
-    },
-    {
-        title: "Our Goal",
-        description: "Our goal is to grow our presence through a strong distribution network, ensure product authenticity and compliance, and improve healthcare access in every community we serve.",
-        icon: "fas fa-solid fa-bowling-ball"
     }
 ]

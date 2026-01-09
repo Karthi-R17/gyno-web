@@ -9,14 +9,14 @@
         <!-- Title -->
         <h3 (click)="onClickProductView(p.division, p.slug)" class="cursor-pointer">{{ p.name }}</h3>
         <!-- Subtitle -->
-        <p class="subtitle" (click)="onClickProductView(p.division, p.slug)" class="cursor-pointer">{{ p.subtitle }}</p>
+        <p (click)="onClickProductView(p.division, p.slug)" class="cursor-pointer subtitle">{{ p.indication }}</p>
         <!-- Pricing -->
         <div class="price-box">
-          <span class="price">₹{{ p.price }}</span>
+          <!-- <span class="price">₹{{ p.price }}</span>
           <span class="mrp" *ngIf="p.mrp">₹{{ p.mrp }}</span>
           <span class="discount" *ngIf="p.mrp && p.price">
             {{ calculateDiscount(p.mrp, p.price) }}% OFF
-          </span>
+          </span> -->
         </div>
       </div>
     </div>

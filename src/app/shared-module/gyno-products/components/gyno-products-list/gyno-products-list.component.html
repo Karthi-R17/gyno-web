@@ -1,6 +1,6 @@
 <section style="background-color: #eee;">
   <div class="text-center container">
-    <h4 class="mb-5"><strong>Gyno Products</strong></h4>
+    <h4 class="mb-5"><strong>Gyno Products</strong></h4> Hi Karthi
     <div class="product-grid">
       <div class="product-card" *ngFor="let p of productsList">
         <!-- Product Image -->
@@ -9,14 +9,14 @@
         <!-- Title -->
         <h3 (click)="onClickProductView(p.slug)" class="cursor-pointer">{{ p.name }}</h3>
         <!-- Subtitle -->
-        <p class="subtitle" (click)="onClickProductView(p.slug)" class="cursor-pointer">{{ p.subtitle }}</p>
+        <p class="subtitle" (click)="onClickProductView(p.slug)" class="cursor-pointer">{{ p.indication }}</p>
         <!-- Pricing -->
         <div class="price-box">
-          <span class="price">₹{{ p.price }}</span>
+          <!-- <span class="price">₹{{ p.price }}</span>
           <span class="mrp" *ngIf="p.mrp">₹{{ p.mrp }}</span>
           <span class="discount" *ngIf="p.mrp && p.price">
             {{ calculateDiscount(p.mrp, p.price) }}% OFF
-          </span>
+          </span> -->
         </div>
       </div>
     </div>
